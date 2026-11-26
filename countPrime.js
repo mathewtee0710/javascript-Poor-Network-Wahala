@@ -1,61 +1,16 @@
- 
-function countPrimes(upperLimit) {
-let primeCount = 0;
-
-let number = 2;
-
-while (number < upperLimit) {
-let isPrime = true;
-let divisor = 2;
-
-while (divisor < number) {
-if (number % divisor === 0) {
-isPrime = false;
+function countPrimes(upperLimi) {
+ let count = 0;
+ for (let num = 2; num < upperLimit; num++) {
+  let isPrime = true;
+  for (let divisor = 2; divisor * divisor <= num; divisor++) {
+   if (num % divisor === 0) {
+    isPrime = false;
+    break;
+   }
+  } 
+  if (isPrime) {
+   count++
+  }
+ }
+ return count;
 }
-divisor = divisor + 1;x
-}
-
-
-if (isPrime === true) {
-primeCount += 1;
-}
-
-number += 1;
-}
-
-return primeCount;
-}
-
-console.log(countPrimes(10));
-
-console.log(" "); countPrime
-function countPrimes(upperLimit) {
-let primeCount = 0;
-
-let number = 2;
-
-while (number < upperLimit) {
-let isPrime = true;
-let divisor = 2;
-
-while (divisor < number) {
-if (number % divisor === 0) {
-isPrime = false;
-}
-divisor = divisor + 1;x
-}
-
-
-if (isPrime === true) {
-primeCount += 1;
-}
-
-number += 1;
-}
-
-return primeCount;
-}
-
-console.log(countPrimes(10));
-
-console.log(" ");
